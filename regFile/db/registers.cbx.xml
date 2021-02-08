@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="registers">
+		<CBX_INST_ENTRY INSTANCE_NAME="|registers|DEC:inst3|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_u4g.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|registers|my_mux:inst33|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_nee.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|registers|my_mux:inst34|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_nee.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Parsa\Desktop\Daneshgah\computer architecture\project\New folder (4)\simulation\qsim
+vregisters
+Z1 I0l3A3bU@=8X2@KCzO3e8W0
+Z2 VGXzV]fb<j:zND7RAfPTc00
+Z3 dC:\Users\Parsa\Desktop\Daneshgah\computer architecture\project\New folder (4)\simulation\qsim
+Z4 w1612811296
+Z5 8registers.vo
+Z6 Fregisters.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|registers.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 lX=RhTcRDZj643BV6:P`53
+!s85 0
+Z11 !s108 1612811297.492000
+Z12 !s107 registers.vo|
+!s101 -O0
+vregisters_vlg_check_tst
+!i10b 1
+!s100 <6@?4l2m^C9LJf6Qi^bG_0
+I321j2?d_mS5HmiR6Hd?__0
+V0^COZUZ8aTm]7>1`LeT7k3
+R3
+R4
+Z13 8registers.vt
+Z14 Fregisters.vt
+L0 67
+R7
+r1
+!s85 0
+31
+Z15 !s108 1612811297.716000
+Z16 !s107 registers.vt|
+Z17 !s90 -work|work|registers.vt|
+!s101 -O0
+R9
+vregisters_vlg_sample_tst
+!i10b 1
+!s100 D2A[3b=g`7MQ3WLT@Ff1m3
+Ih6Ko[ODz?VRT3o0JmZWkm0
+VWCHl?^gC9N_6TneDz1FFR3
+R3
+R4
+R13
+R14
+L0 29
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R9
+vregisters_vlg_vec_tst
+!i10b 1
+!s100 V^1mQX6<E<Y:D8QTATZQK1
+I:d6<agC4[e02MX`X2B14G2
+Z18 VM^QnFVHhEQkZ@R0dOH2i92
+R3
+R4
+R13
+R14
+L0 719
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R9

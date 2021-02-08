@@ -1,0 +1,1647 @@
+Analysis & Synthesis report for test
+Mon Feb 08 23:07:26 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: myMux:inst12|LPM_MUX:LPM_MUX_component
+ 11. Parameter Settings for User Entity Instance: LPM_INV:inst9
+ 12. Parameter Settings for User Entity Instance: LPM_XOR:inst8
+ 13. Parameter Settings for User Entity Instance: myShift:inst10|lpm_clshift:LPM_CLSHIFT_component
+ 14. Parameter Settings for User Entity Instance: myRotate:inst11|lpm_clshift:LPM_CLSHIFT_component
+ 15. Parameter Settings for User Entity Instance: my_comparetor:inst|lpm_compare:LPM_COMPARE_component
+ 16. Parameter Settings for User Entity Instance: myAddSub:inst2|lpm_add_sub:LPM_ADD_SUB_component
+ 17. Parameter Settings for User Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component
+ 18. Parameter Settings for User Entity Instance: myDivider:inst4|lpm_divide:LPM_DIVIDE_component
+ 19. Parameter Settings for User Entity Instance: LPM_INV:inst7
+ 20. Parameter Settings for User Entity Instance: LPM_AND:inst5
+ 21. Parameter Settings for User Entity Instance: my_mux2:inst13|LPM_MUX:LPM_MUX_component
+ 22. Parameter Settings for User Entity Instance: my_mux2:inst14|LPM_MUX:LPM_MUX_component
+ 23. Parameter Settings for User Entity Instance: LPM_INV:inst1
+ 24. Parameter Settings for User Entity Instance: LPM_INV:inst6
+ 25. Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult7
+ 26. Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out8
+ 27. Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult3
+ 28. Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out4
+ 29. Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult1
+ 30. Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out2
+ 31. Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult5
+ 32. Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out6
+ 33. lpm_mult Parameter Settings by Entity Instance
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Feb 08 23:07:26 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; test                                            ;
+; Top-level Entity Name              ; test                                            ;
+; Family                             ; Cyclone IV GX                                   ;
+; Total logic elements               ; 3,322                                           ;
+;     Total combinational functions  ; 3,322                                           ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 101                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total GXB Receiver Channel PCS     ; 0                                               ;
+; Total GXB Receiver Channel PMA     ; 0                                               ;
+; Total GXB Transmitter Channel PCS  ; 0                                               ;
+; Total GXB Transmitter Channel PMA  ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; test               ; test               ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ; Library ;
++------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; test.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Emertat/Desktop/New folder/test.bdf                              ;         ;
+; myMultiplier.vhd                   ; yes             ; User Wizard-Generated File         ; C:/Users/Emertat/Desktop/New folder/myMultiplier.vhd                      ;         ;
+; myDivider.vhd                      ; yes             ; User Wizard-Generated File         ; C:/Users/Emertat/Desktop/New folder/myDivider.vhd                         ;         ;
+; myShift.vhd                        ; yes             ; User Wizard-Generated File         ; C:/Users/Emertat/Desktop/New folder/myShift.vhd                           ;         ;
+; myRotate.vhd                       ; yes             ; User Wizard-Generated File         ; C:/Users/Emertat/Desktop/New folder/myRotate.vhd                          ;         ;
+; myMux.vhd                          ; yes             ; User Wizard-Generated File         ; C:/Users/Emertat/Desktop/New folder/myMux.vhd                             ;         ;
+; my_mux2.vhd                        ; yes             ; User Wizard-Generated File         ; C:/Users/Emertat/Desktop/New folder/my_mux2.vhd                           ;         ;
+; lpm_mux.tdf                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
+; aglobal130.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; muxlut.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
+; bypassff.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mux_nee.tdf                     ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mux_nee.tdf                        ;         ;
+; zerogenerator.tdf                  ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/Emertat/Desktop/New folder/zerogenerator.tdf                     ;         ;
+; zerogenerator_lpm_constant_r09.tdf ; yes             ; Auto-Found AHDL File               ; C:/Users/Emertat/Desktop/New folder/zerogenerator_lpm_constant_r09.tdf    ;         ;
+; lpm_inv.tdf                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_inv.tdf             ;         ;
+; lpm_xor.tdf                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_xor.tdf             ;         ;
+; lpm_clshift.tdf                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_clshift.tdf         ;         ;
+; db/lpm_clshift_vjc.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/lpm_clshift_vjc.tdf                ;         ;
+; db/lpm_clshift_jhc.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/lpm_clshift_jhc.tdf                ;         ;
+; my_comparetor.tdf                  ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/Emertat/Desktop/New folder/my_comparetor.tdf                     ;         ;
+; lpm_compare.inc                    ; yes             ; Auto-Found AHDL File               ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_compare.tdf                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
+; comptree.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/comptree.inc            ;         ;
+; db/cmpr_s8h.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/cmpr_s8h.tdf                       ;         ;
+; myaddsub.tdf                       ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/Emertat/Desktop/New folder/myaddsub.tdf                          ;         ;
+; lpm_add_sub.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; lpm_add_sub.tdf                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_1lg.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/add_sub_1lg.tdf                    ;         ;
+; lpm_mult.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; multcore.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; db/mult_bcn.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mult_bcn.tdf                       ;         ;
+; lpm_divide.tdf                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; db/lpm_divide_kop.tdf              ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/lpm_divide_kop.tdf                 ;         ;
+; db/sign_div_unsign_39h.tdf         ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/sign_div_unsign_39h.tdf            ;         ;
+; db/alt_u_div_0ef.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/alt_u_div_0ef.tdf                  ;         ;
+; db/add_sub_1tc.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/add_sub_1tc.tdf                    ;         ;
+; db/add_sub_2tc.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/add_sub_2tc.tdf                    ;         ;
+; lpm_and.tdf                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_and.tdf             ;         ;
+; db/mux_0de.tdf                     ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mux_0de.tdf                        ;         ;
+; alt_mac_mult.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_mac_mult.tdf        ;         ;
+; lpm_mult.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.inc            ;         ;
+; db/mac_mult_gdh1.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mac_mult_gdh1.tdf                  ;         ;
+; db/mult_ako.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mult_ako.tdf                       ;         ;
+; alt_mac_out.tdf                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_mac_out.tdf         ;         ;
+; alt_zaccum.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_zaccum.inc          ;         ;
+; db/mac_out_uv82.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mac_out_uv82.tdf                   ;         ;
+; db/mac_mult_58h1.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mac_mult_58h1.tdf                  ;         ;
+; db/mult_bko.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mult_bko.tdf                       ;         ;
+; db/mac_out_kv82.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mac_out_kv82.tdf                   ;         ;
+; db/mac_mult_33h1.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mac_mult_33h1.tdf                  ;         ;
+; db/mult_rul.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mult_rul.tdf                       ;         ;
+; db/mac_out_sv82.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mac_out_sv82.tdf                   ;         ;
+; db/mac_mult_68h1.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mac_mult_68h1.tdf                  ;         ;
+; db/mult_cko.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Emertat/Desktop/New folder/db/mult_cko.tdf                       ;         ;
++------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 101              ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; select[1]~input  ;
+; Maximum fan-out          ; 197              ;
+; Total fan-out            ; 11121            ;
+; Average fan-out          ; 3.16             ;
++--------------------------+------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                    ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                             ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |test                                         ; 3322 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 101  ; 0            ; |test                                                                                                                                           ; work         ;
+;    |lpm_and:inst5|                            ; 31 (31)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|lpm_and:inst5                                                                                                                             ; work         ;
+;    |myAddSub:inst2|                           ; 65 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myAddSub:inst2                                                                                                                            ; work         ;
+;       |lpm_add_sub:LPM_ADD_SUB_component|     ; 65 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myAddSub:inst2|lpm_add_sub:LPM_ADD_SUB_component                                                                                          ; work         ;
+;          |add_sub_1lg:auto_generated|         ; 65 (65)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myAddSub:inst2|lpm_add_sub:LPM_ADD_SUB_component|add_sub_1lg:auto_generated                                                               ; work         ;
+;    |myDivider:inst4|                          ; 1328 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myDivider:inst4                                                                                                                           ; work         ;
+;       |lpm_divide:LPM_DIVIDE_component|       ; 1328 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myDivider:inst4|lpm_divide:LPM_DIVIDE_component                                                                                           ; work         ;
+;          |lpm_divide_kop:auto_generated|      ; 1328 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myDivider:inst4|lpm_divide:LPM_DIVIDE_component|lpm_divide_kop:auto_generated                                                             ; work         ;
+;             |sign_div_unsign_39h:divider|     ; 1328 (188)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myDivider:inst4|lpm_divide:LPM_DIVIDE_component|lpm_divide_kop:auto_generated|sign_div_unsign_39h:divider                                 ; work         ;
+;                |alt_u_div_0ef:divider|        ; 1140 (1140)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myDivider:inst4|lpm_divide:LPM_DIVIDE_component|lpm_divide_kop:auto_generated|sign_div_unsign_39h:divider|alt_u_div_0ef:divider           ; work         ;
+;    |myMultiplier:inst3|                       ; 1397 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3                                                                                                                        ; work         ;
+;       |lpm_mult:lpm_mult_component|           ; 1397 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component                                                                                            ; work         ;
+;          |mult_bcn:auto_generated|            ; 1397 (92)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated                                                                    ; work         ;
+;             |alt_mac_mult:mac_mult1|          ; 422 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult1                                             ; work         ;
+;                |mac_mult_33h1:auto_generated| ; 422 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult1|mac_mult_33h1:auto_generated                ; work         ;
+;                   |mult_rul:mult1|            ; 422 (422)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult1|mac_mult_33h1:auto_generated|mult_rul:mult1 ; work         ;
+;             |alt_mac_mult:mac_mult3|          ; 314 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult3                                             ; work         ;
+;                |mac_mult_58h1:auto_generated| ; 314 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult3|mac_mult_58h1:auto_generated                ; work         ;
+;                   |mult_bko:mult1|            ; 314 (314)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult3|mac_mult_58h1:auto_generated|mult_bko:mult1 ; work         ;
+;             |alt_mac_mult:mac_mult5|          ; 322 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult5                                             ; work         ;
+;                |mac_mult_68h1:auto_generated| ; 322 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult5|mac_mult_68h1:auto_generated                ; work         ;
+;                   |mult_cko:mult1|            ; 322 (322)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult5|mac_mult_68h1:auto_generated|mult_cko:mult1 ; work         ;
+;             |alt_mac_mult:mac_mult7|          ; 247 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult7                                             ; work         ;
+;                |mac_mult_gdh1:auto_generated| ; 247 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult7|mac_mult_gdh1:auto_generated                ; work         ;
+;                   |mult_ako:mult1|            ; 247 (247)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult7|mac_mult_gdh1:auto_generated|mult_ako:mult1 ; work         ;
+;    |myMux:inst12|                             ; 426 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMux:inst12                                                                                                                              ; work         ;
+;       |lpm_mux:LPM_MUX_component|             ; 426 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMux:inst12|lpm_mux:LPM_MUX_component                                                                                                    ; work         ;
+;          |mux_nee:auto_generated|             ; 426 (426)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|myMux:inst12|lpm_mux:LPM_MUX_component|mux_nee:auto_generated                                                                             ; work         ;
+;    |my_comparetor:inst|                       ; 75 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|my_comparetor:inst                                                                                                                        ; work         ;
+;       |lpm_compare:LPM_COMPARE_component|     ; 75 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|my_comparetor:inst|lpm_compare:LPM_COMPARE_component                                                                                      ; work         ;
+;          |cmpr_s8h:auto_generated|            ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |test|my_comparetor:inst|lpm_compare:LPM_COMPARE_component|cmpr_s8h:auto_generated                                                              ; work         ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                              ;
++--------+--------------+---------+--------------+--------------+----------------------------+-------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance            ; IP Include File                                       ;
++--------+--------------+---------+--------------+--------------+----------------------------+-------------------------------------------------------+
+; Altera ; LPM_COMPARE  ; N/A     ; N/A          ; N/A          ; |test|my_comparetor:inst   ; C:/Users/Emertat/Desktop/New folder/my_comparetor.tdf ;
+; Altera ; LPM_ADD_SUB  ; N/A     ; N/A          ; N/A          ; |test|myAddSub:inst2       ; C:/Users/Emertat/Desktop/New folder/myaddsub.tdf      ;
+; Altera ; LPM_MULT     ; 13.0    ; N/A          ; N/A          ; |test|myMultiplier:inst3   ; C:/Users/Emertat/Desktop/New folder/myMultiplier.vhd  ;
+; Altera ; LPM_DIVIDE   ; 13.0    ; N/A          ; N/A          ; |test|myDivider:inst4      ; C:/Users/Emertat/Desktop/New folder/myDivider.vhd     ;
+; Altera ; LPM_CLSHIFT  ; 13.0    ; N/A          ; N/A          ; |test|myShift:inst10       ; C:/Users/Emertat/Desktop/New folder/myShift.vhd       ;
+; Altera ; LPM_CLSHIFT  ; 13.0    ; N/A          ; N/A          ; |test|myRotate:inst11      ; C:/Users/Emertat/Desktop/New folder/myRotate.vhd      ;
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |test|myMux:inst12         ; C:/Users/Emertat/Desktop/New folder/myMux.vhd         ;
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |test|my_mux2:inst13       ; C:/Users/Emertat/Desktop/New folder/my_mux2.vhd       ;
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |test|my_mux2:inst14       ; C:/Users/Emertat/Desktop/New folder/my_mux2.vhd       ;
+; Altera ; LPM_CONSTANT ; N/A     ; N/A          ; N/A          ; |test|zeroGenerator:inst17 ; C:/Users/Emertat/Desktop/New folder/zerogenerator.tdf ;
++--------+--------------+---------+--------------+--------------+----------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: myMux:inst12|LPM_MUX:LPM_MUX_component ;
++------------------------+---------------+--------------------------------------------+
+; Parameter Name         ; Value         ; Type                                       ;
++------------------------+---------------+--------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                             ;
+; LPM_WIDTH              ; 32            ; Signed Integer                             ;
+; LPM_SIZE               ; 32            ; Signed Integer                             ;
+; LPM_WIDTHS             ; 5             ; Signed Integer                             ;
+; LPM_PIPELINE           ; 0             ; Signed Integer                             ;
+; CBXI_PARAMETER         ; mux_nee       ; Untyped                                    ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                    ;
++------------------------+---------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_INV:inst9 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; LPM_WIDTH      ; 32    ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_XOR:inst8 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; LPM_WIDTH      ; 32    ; Untyped                           ;
+; LPM_SIZE       ; 2     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: myShift:inst10|lpm_clshift:LPM_CLSHIFT_component ;
++----------------+-----------------+------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                       ;
++----------------+-----------------+------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                    ;
+; LPM_SHIFTTYPE  ; LOGICAL         ; Untyped                                                    ;
+; LPM_WIDTH      ; 32              ; Signed Integer                                             ;
+; LPM_WIDTHDIST  ; 5               ; Signed Integer                                             ;
+; CBXI_PARAMETER ; lpm_clshift_vjc ; Untyped                                                    ;
++----------------+-----------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: myRotate:inst11|lpm_clshift:LPM_CLSHIFT_component ;
++----------------+-----------------+-------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                        ;
++----------------+-----------------+-------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                     ;
+; LPM_SHIFTTYPE  ; ROTATE          ; Untyped                                                     ;
+; LPM_WIDTH      ; 32              ; Signed Integer                                              ;
+; LPM_WIDTHDIST  ; 5               ; Signed Integer                                              ;
+; CBXI_PARAMETER ; lpm_clshift_jhc ; Untyped                                                     ;
++----------------+-----------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: my_comparetor:inst|lpm_compare:LPM_COMPARE_component ;
++------------------------+---------------+----------------------------------------------------------+
+; Parameter Name         ; Value         ; Type                                                     ;
++------------------------+---------------+----------------------------------------------------------+
+; lpm_width              ; 32            ; Untyped                                                  ;
+; LPM_REPRESENTATION     ; SIGNED        ; Untyped                                                  ;
+; LPM_PIPELINE           ; 0             ; Untyped                                                  ;
+; CHAIN_SIZE             ; 8             ; Untyped                                                  ;
+; ONE_INPUT_IS_CONSTANT  ; NO            ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL        ; Untyped                                                  ;
+; CASCADE_CHAIN          ; MANUAL        ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH                                       ;
+; CASCADE_CHAIN_LENGTH   ; 2             ; CASCADE_CHAIN_LENGTH                                     ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cmpr_s8h      ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                           ;
++------------------------+---------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: myAddSub:inst2|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+---------------+------------------------------------------------------+
+; Parameter Name         ; Value         ; Type                                                 ;
++------------------------+---------------+------------------------------------------------------+
+; LPM_WIDTH              ; 32            ; Untyped                                              ;
+; LPM_REPRESENTATION     ; SIGNED        ; Untyped                                              ;
+; LPM_DIRECTION          ; DEFAULT       ; Untyped                                              ;
+; ONE_INPUT_IS_CONSTANT  ; NO            ; Untyped                                              ;
+; LPM_PIPELINE           ; 0             ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5             ; Untyped                                              ;
+; REGISTERED_AT_END      ; 0             ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5             ; Untyped                                              ;
+; USE_CS_BUFFERS         ; 1             ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL        ; Untyped                                              ;
+; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH                                   ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                              ;
+; USE_WYS                ; OFF           ; Untyped                                              ;
+; STYLE                  ; FAST          ; Untyped                                              ;
+; CBXI_PARAMETER         ; add_sub_1lg   ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                       ;
++------------------------+---------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component ;
++------------------------------------------------+---------------+----------------------------+
+; Parameter Name                                 ; Value         ; Type                       ;
++------------------------------------------------+---------------+----------------------------+
+; AUTO_CARRY_CHAINS                              ; ON            ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS                           ; OFF           ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS                            ; ON            ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF           ; IGNORE_CASCADE             ;
+; LPM_WIDTHA                                     ; 32            ; Signed Integer             ;
+; LPM_WIDTHB                                     ; 32            ; Signed Integer             ;
+; LPM_WIDTHP                                     ; 32            ; Signed Integer             ;
+; LPM_WIDTHR                                     ; 0             ; Untyped                    ;
+; LPM_WIDTHS                                     ; 1             ; Untyped                    ;
+; LPM_REPRESENTATION                             ; SIGNED        ; Untyped                    ;
+; LPM_PIPELINE                                   ; 0             ; Untyped                    ;
+; LATENCY                                        ; 0             ; Untyped                    ;
+; INPUT_A_IS_CONSTANT                            ; NO            ; Untyped                    ;
+; INPUT_B_IS_CONSTANT                            ; NO            ; Untyped                    ;
+; USE_EAB                                        ; OFF           ; Untyped                    ;
+; MAXIMIZE_SPEED                                 ; 5             ; Untyped                    ;
+; DEVICE_FAMILY                                  ; Cyclone IV GX ; Untyped                    ;
+; CARRY_CHAIN                                    ; MANUAL        ; Untyped                    ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT           ; TECH_MAPPER_APEX20K        ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO          ; Untyped                    ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0             ; Untyped                    ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0             ; Untyped                    ;
+; CBXI_PARAMETER                                 ; mult_bcn      ; Untyped                    ;
+; INPUT_A_FIXED_VALUE                            ; Bx            ; Untyped                    ;
+; INPUT_B_FIXED_VALUE                            ; Bx            ; Untyped                    ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF           ; Untyped                    ;
++------------------------------------------------+---------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: myDivider:inst4|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Signed Integer                                     ;
+; LPM_WIDTHD             ; 32             ; Signed Integer                                     ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_kop ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_INV:inst7 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; LPM_WIDTH      ; 32    ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_AND:inst5  ;
++------------------------+---------------+--------------------+
+; Parameter Name         ; Value         ; Type               ;
++------------------------+---------------+--------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY         ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY       ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE       ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE     ;
+; LPM_WIDTH              ; 32            ; Untyped            ;
+; LPM_SIZE               ; 2             ; Untyped            ;
+; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH ;
+; CARRY_CHAIN            ; MANUAL        ; Untyped            ;
+; CASCADE_CHAIN          ; MANUAL        ; Untyped            ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped            ;
++------------------------+---------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: my_mux2:inst13|LPM_MUX:LPM_MUX_component ;
++------------------------+---------------+----------------------------------------------+
+; Parameter Name         ; Value         ; Type                                         ;
++------------------------+---------------+----------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                               ;
+; LPM_WIDTH              ; 32            ; Signed Integer                               ;
+; LPM_SIZE               ; 2             ; Signed Integer                               ;
+; LPM_WIDTHS             ; 1             ; Signed Integer                               ;
+; LPM_PIPELINE           ; 0             ; Signed Integer                               ;
+; CBXI_PARAMETER         ; mux_0de       ; Untyped                                      ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                      ;
++------------------------+---------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: my_mux2:inst14|LPM_MUX:LPM_MUX_component ;
++------------------------+---------------+----------------------------------------------+
+; Parameter Name         ; Value         ; Type                                         ;
++------------------------+---------------+----------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                               ;
+; LPM_WIDTH              ; 32            ; Signed Integer                               ;
+; LPM_SIZE               ; 2             ; Signed Integer                               ;
+; LPM_WIDTHS             ; 1             ; Signed Integer                               ;
+; LPM_PIPELINE           ; 0             ; Signed Integer                               ;
+; CBXI_PARAMETER         ; mux_0de       ; Untyped                                      ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                      ;
++------------------------+---------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_INV:inst1 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; LPM_WIDTH      ; 32    ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_INV:inst6 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; LPM_WIDTH      ; 32    ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult7 ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name               ; Value         ; Type                                                                                            ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTHS                   ; 1             ; Untyped                                                                                         ;
+; DATAA_WIDTH                  ; 14            ; Untyped                                                                                         ;
+; DATAB_WIDTH                  ; 14            ; Untyped                                                                                         ;
+; DATAA_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; DATAB_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; SIGNA_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; SIGNB_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; OUTPUT_CLOCK                 ; NONE          ; Untyped                                                                                         ;
+; DATAA_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; DATAB_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; SIGNA_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; SIGNB_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; OUTPUT_CLEAR                 ; NONE          ; Untyped                                                                                         ;
+; ROUND_CLOCK                  ; none          ; Untyped                                                                                         ;
+; ROUND_CLEAR                  ; none          ; Untyped                                                                                         ;
+; SATURATE_CLOCK               ; none          ; Untyped                                                                                         ;
+; SATURATE_CLEAR               ; none          ; Untyped                                                                                         ;
+; BYPASS_MULTIPLIER            ; NO            ; Untyped                                                                                         ;
+; DYNAMIC_SCAN_CHAIN_SUPPORTED ; NO            ; Untyped                                                                                         ;
+; USING_ROUNDING               ; NO            ; Untyped                                                                                         ;
+; USING_SATURATION             ; NO            ; Untyped                                                                                         ;
+; EXTRA_OUTPUT_CLOCK           ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNA_CLOCK            ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNB_CLOCK            ; none          ; Untyped                                                                                         ;
+; EXTRA_OUTPUT_CLEAR           ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNA_CLEAR            ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNB_CLEAR            ; none          ; Untyped                                                                                         ;
+; MULT_PIPELINE                ; 0             ; Untyped                                                                                         ;
+; MULT_CLOCK                   ; NONE          ; Untyped                                                                                         ;
+; MULT_CLEAR                   ; NONE          ; Untyped                                                                                         ;
+; MULT_REPRESENTATION_A        ; SIGNED        ; Untyped                                                                                         ;
+; MULT_REPRESENTATION_B        ; SIGNED        ; Untyped                                                                                         ;
+; MULT_INPUT_A_IS_CONSTANT     ; NO            ; Untyped                                                                                         ;
+; MULT_INPUT_B_IS_CONSTANT     ; NO            ; Untyped                                                                                         ;
+; MULT_INPUT_A_FIXED_VALUE     ; Bx            ; Untyped                                                                                         ;
+; MULT_INPUT_B_FIXED_VALUE     ; Bx            ; Untyped                                                                                         ;
+; MULT_MAXIMIZE_SPEED          ; 5             ; Untyped                                                                                         ;
+; CBXI_PARAMETER               ; mac_mult_gdh1 ; Untyped                                                                                         ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out8 ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+; Parameter Name                ; Value        ; Type                                                                                          ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+; OPERATION_MODE                ; OUTPUT_ONLY  ; Untyped                                                                                       ;
+; DATAA_WIDTH                   ; 28           ; Untyped                                                                                       ;
+; DATAB_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; DATAC_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; DATAD_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; ADDNSUB0_CLOCK                ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_CLOCK                ; NONE         ; Untyped                                                                                       ;
+; ROUND0_CLOCK                  ; none         ; Untyped                                                                                       ;
+; ROUND1_CLOCK                  ; none         ; Untyped                                                                                       ;
+; SATURATE_CLOCK                ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_CLOCK          ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_CLOCK          ; none         ; Untyped                                                                                       ;
+; ZEROACC_CLOCK                 ; NONE         ; Untyped                                                                                       ;
+; SIGNA_CLOCK                   ; NONE         ; Untyped                                                                                       ;
+; SIGNB_CLOCK                   ; NONE         ; Untyped                                                                                       ;
+; OUTPUT_CLOCK                  ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_CLEAR                ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_CLEAR                ; NONE         ; Untyped                                                                                       ;
+; ROUND0_CLEAR                  ; none         ; Untyped                                                                                       ;
+; ROUND1_CLEAR                  ; none         ; Untyped                                                                                       ;
+; SATURATE_CLEAR                ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_CLEAR          ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_CLEAR          ; none         ; Untyped                                                                                       ;
+; ZEROACC_CLEAR                 ; NONE         ; Untyped                                                                                       ;
+; SIGNA_CLEAR                   ; NONE         ; Untyped                                                                                       ;
+; SIGNB_CLEAR                   ; NONE         ; Untyped                                                                                       ;
+; OUTPUT_CLEAR                  ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                       ;
+; ROUND0_PIPELINE_CLOCK         ; none         ; Untyped                                                                                       ;
+; ROUND1_PIPELINE_CLOCK         ; none         ; Untyped                                                                                       ;
+; SATURATE_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                       ;
+; ZEROACC_PIPELINE_CLOCK        ; NONE         ; Untyped                                                                                       ;
+; SIGNA_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                       ;
+; SIGNB_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                       ;
+; ROUND0_PIPELINE_CLEAR         ; none         ; Untyped                                                                                       ;
+; ROUND1_PIPELINE_CLEAR         ; none         ; Untyped                                                                                       ;
+; SATURATE_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                       ;
+; ZEROACC_PIPELINE_CLEAR        ; NONE         ; Untyped                                                                                       ;
+; SIGNA_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                       ;
+; SIGNB_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                       ;
+; MODE0_CLOCK                   ; none         ; Untyped                                                                                       ;
+; MODE1_CLOCK                   ; none         ; Untyped                                                                                       ;
+; ZEROACC1_CLOCK                ; none         ; Untyped                                                                                       ;
+; SATURATE1_CLOCK               ; none         ; Untyped                                                                                       ;
+; OUTPUT1_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT2_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT3_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT4_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT5_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT6_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT7_CLOCK                 ; none         ; Untyped                                                                                       ;
+; MODE0_CLEAR                   ; none         ; Untyped                                                                                       ;
+; MODE1_CLEAR                   ; none         ; Untyped                                                                                       ;
+; ZEROACC1_CLEAR                ; none         ; Untyped                                                                                       ;
+; SATURATE1_CLEAR               ; none         ; Untyped                                                                                       ;
+; OUTPUT1_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT2_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT3_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT4_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT5_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT6_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT7_CLEAR                 ; none         ; Untyped                                                                                       ;
+; MODE0_PIPELINE_CLOCK          ; none         ; Untyped                                                                                       ;
+; MODE1_PIPELINE_CLOCK          ; none         ; Untyped                                                                                       ;
+; ZEROACC1_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; SATURATE1_PIPELINE_CLOCK      ; none         ; Untyped                                                                                       ;
+; MODE0_PIPELINE_CLEAR          ; none         ; Untyped                                                                                       ;
+; MODE1_PIPELINE_CLEAR          ; none         ; Untyped                                                                                       ;
+; ZEROACC1_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; SATURATE1_PIPELINE_CLEAR      ; none         ; Untyped                                                                                       ;
+; FIRST_ADDER0_CLOCK            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER1_CLOCK            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER0_CLEAR            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER1_CLEAR            ; NONE         ; Untyped                                                                                       ;
+; DATAA_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                       ;
+; DATAC_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                       ;
+; USING_ROUNDING                ; NO           ; Untyped                                                                                       ;
+; USING_SATURATION              ; NO           ; Untyped                                                                                       ;
+; USING_MULT_SATURATION         ; NO           ; Untyped                                                                                       ;
+; USING_LOADABLE_ACCUM          ; NO           ; Untyped                                                                                       ;
+; LOADABLE_ACCUM_SUPPORTED      ; NO           ; Untyped                                                                                       ;
+; USING_CHAINOUT                ; NO           ; Untyped                                                                                       ;
+; CHAININ_WIDTH                 ; 0            ; Untyped                                                                                       ;
+; CHAINOUT_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; CHAINOUT_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; CBXI_PARAMETER                ; mac_out_uv82 ; Untyped                                                                                       ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult3 ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name               ; Value         ; Type                                                                                            ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTHS                   ; 1             ; Untyped                                                                                         ;
+; DATAA_WIDTH                  ; 18            ; Untyped                                                                                         ;
+; DATAB_WIDTH                  ; 14            ; Untyped                                                                                         ;
+; DATAA_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; DATAB_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; SIGNA_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; SIGNB_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; OUTPUT_CLOCK                 ; NONE          ; Untyped                                                                                         ;
+; DATAA_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; DATAB_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; SIGNA_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; SIGNB_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; OUTPUT_CLEAR                 ; NONE          ; Untyped                                                                                         ;
+; ROUND_CLOCK                  ; none          ; Untyped                                                                                         ;
+; ROUND_CLEAR                  ; none          ; Untyped                                                                                         ;
+; SATURATE_CLOCK               ; none          ; Untyped                                                                                         ;
+; SATURATE_CLEAR               ; none          ; Untyped                                                                                         ;
+; BYPASS_MULTIPLIER            ; NO            ; Untyped                                                                                         ;
+; DYNAMIC_SCAN_CHAIN_SUPPORTED ; NO            ; Untyped                                                                                         ;
+; USING_ROUNDING               ; NO            ; Untyped                                                                                         ;
+; USING_SATURATION             ; NO            ; Untyped                                                                                         ;
+; EXTRA_OUTPUT_CLOCK           ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNA_CLOCK            ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNB_CLOCK            ; none          ; Untyped                                                                                         ;
+; EXTRA_OUTPUT_CLEAR           ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNA_CLEAR            ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNB_CLEAR            ; none          ; Untyped                                                                                         ;
+; MULT_PIPELINE                ; 0             ; Untyped                                                                                         ;
+; MULT_CLOCK                   ; NONE          ; Untyped                                                                                         ;
+; MULT_CLEAR                   ; NONE          ; Untyped                                                                                         ;
+; MULT_REPRESENTATION_A        ; UNSIGNED      ; Untyped                                                                                         ;
+; MULT_REPRESENTATION_B        ; SIGNED        ; Untyped                                                                                         ;
+; MULT_INPUT_A_IS_CONSTANT     ; NO            ; Untyped                                                                                         ;
+; MULT_INPUT_B_IS_CONSTANT     ; NO            ; Untyped                                                                                         ;
+; MULT_INPUT_A_FIXED_VALUE     ; Bx            ; Untyped                                                                                         ;
+; MULT_INPUT_B_FIXED_VALUE     ; Bx            ; Untyped                                                                                         ;
+; MULT_MAXIMIZE_SPEED          ; 5             ; Untyped                                                                                         ;
+; CBXI_PARAMETER               ; mac_mult_58h1 ; Untyped                                                                                         ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out4 ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+; Parameter Name                ; Value        ; Type                                                                                          ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+; OPERATION_MODE                ; OUTPUT_ONLY  ; Untyped                                                                                       ;
+; DATAA_WIDTH                   ; 32           ; Untyped                                                                                       ;
+; DATAB_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; DATAC_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; DATAD_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; ADDNSUB0_CLOCK                ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_CLOCK                ; NONE         ; Untyped                                                                                       ;
+; ROUND0_CLOCK                  ; none         ; Untyped                                                                                       ;
+; ROUND1_CLOCK                  ; none         ; Untyped                                                                                       ;
+; SATURATE_CLOCK                ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_CLOCK          ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_CLOCK          ; none         ; Untyped                                                                                       ;
+; ZEROACC_CLOCK                 ; NONE         ; Untyped                                                                                       ;
+; SIGNA_CLOCK                   ; NONE         ; Untyped                                                                                       ;
+; SIGNB_CLOCK                   ; NONE         ; Untyped                                                                                       ;
+; OUTPUT_CLOCK                  ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_CLEAR                ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_CLEAR                ; NONE         ; Untyped                                                                                       ;
+; ROUND0_CLEAR                  ; none         ; Untyped                                                                                       ;
+; ROUND1_CLEAR                  ; none         ; Untyped                                                                                       ;
+; SATURATE_CLEAR                ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_CLEAR          ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_CLEAR          ; none         ; Untyped                                                                                       ;
+; ZEROACC_CLEAR                 ; NONE         ; Untyped                                                                                       ;
+; SIGNA_CLEAR                   ; NONE         ; Untyped                                                                                       ;
+; SIGNB_CLEAR                   ; NONE         ; Untyped                                                                                       ;
+; OUTPUT_CLEAR                  ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                       ;
+; ROUND0_PIPELINE_CLOCK         ; none         ; Untyped                                                                                       ;
+; ROUND1_PIPELINE_CLOCK         ; none         ; Untyped                                                                                       ;
+; SATURATE_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                       ;
+; ZEROACC_PIPELINE_CLOCK        ; NONE         ; Untyped                                                                                       ;
+; SIGNA_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                       ;
+; SIGNB_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                       ;
+; ROUND0_PIPELINE_CLEAR         ; none         ; Untyped                                                                                       ;
+; ROUND1_PIPELINE_CLEAR         ; none         ; Untyped                                                                                       ;
+; SATURATE_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                       ;
+; ZEROACC_PIPELINE_CLEAR        ; NONE         ; Untyped                                                                                       ;
+; SIGNA_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                       ;
+; SIGNB_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                       ;
+; MODE0_CLOCK                   ; none         ; Untyped                                                                                       ;
+; MODE1_CLOCK                   ; none         ; Untyped                                                                                       ;
+; ZEROACC1_CLOCK                ; none         ; Untyped                                                                                       ;
+; SATURATE1_CLOCK               ; none         ; Untyped                                                                                       ;
+; OUTPUT1_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT2_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT3_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT4_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT5_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT6_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT7_CLOCK                 ; none         ; Untyped                                                                                       ;
+; MODE0_CLEAR                   ; none         ; Untyped                                                                                       ;
+; MODE1_CLEAR                   ; none         ; Untyped                                                                                       ;
+; ZEROACC1_CLEAR                ; none         ; Untyped                                                                                       ;
+; SATURATE1_CLEAR               ; none         ; Untyped                                                                                       ;
+; OUTPUT1_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT2_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT3_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT4_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT5_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT6_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT7_CLEAR                 ; none         ; Untyped                                                                                       ;
+; MODE0_PIPELINE_CLOCK          ; none         ; Untyped                                                                                       ;
+; MODE1_PIPELINE_CLOCK          ; none         ; Untyped                                                                                       ;
+; ZEROACC1_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; SATURATE1_PIPELINE_CLOCK      ; none         ; Untyped                                                                                       ;
+; MODE0_PIPELINE_CLEAR          ; none         ; Untyped                                                                                       ;
+; MODE1_PIPELINE_CLEAR          ; none         ; Untyped                                                                                       ;
+; ZEROACC1_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; SATURATE1_PIPELINE_CLEAR      ; none         ; Untyped                                                                                       ;
+; FIRST_ADDER0_CLOCK            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER1_CLOCK            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER0_CLEAR            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER1_CLEAR            ; NONE         ; Untyped                                                                                       ;
+; DATAA_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                       ;
+; DATAC_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                       ;
+; USING_ROUNDING                ; NO           ; Untyped                                                                                       ;
+; USING_SATURATION              ; NO           ; Untyped                                                                                       ;
+; USING_MULT_SATURATION         ; NO           ; Untyped                                                                                       ;
+; USING_LOADABLE_ACCUM          ; NO           ; Untyped                                                                                       ;
+; LOADABLE_ACCUM_SUPPORTED      ; NO           ; Untyped                                                                                       ;
+; USING_CHAINOUT                ; NO           ; Untyped                                                                                       ;
+; CHAININ_WIDTH                 ; 0            ; Untyped                                                                                       ;
+; CHAINOUT_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; CHAINOUT_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; CBXI_PARAMETER                ; mac_out_kv82 ; Untyped                                                                                       ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult1 ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name               ; Value         ; Type                                                                                            ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTHS                   ; 1             ; Untyped                                                                                         ;
+; DATAA_WIDTH                  ; 18            ; Untyped                                                                                         ;
+; DATAB_WIDTH                  ; 18            ; Untyped                                                                                         ;
+; DATAA_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; DATAB_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; SIGNA_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; SIGNB_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; OUTPUT_CLOCK                 ; NONE          ; Untyped                                                                                         ;
+; DATAA_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; DATAB_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; SIGNA_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; SIGNB_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; OUTPUT_CLEAR                 ; NONE          ; Untyped                                                                                         ;
+; ROUND_CLOCK                  ; none          ; Untyped                                                                                         ;
+; ROUND_CLEAR                  ; none          ; Untyped                                                                                         ;
+; SATURATE_CLOCK               ; none          ; Untyped                                                                                         ;
+; SATURATE_CLEAR               ; none          ; Untyped                                                                                         ;
+; BYPASS_MULTIPLIER            ; NO            ; Untyped                                                                                         ;
+; DYNAMIC_SCAN_CHAIN_SUPPORTED ; NO            ; Untyped                                                                                         ;
+; USING_ROUNDING               ; NO            ; Untyped                                                                                         ;
+; USING_SATURATION             ; NO            ; Untyped                                                                                         ;
+; EXTRA_OUTPUT_CLOCK           ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNA_CLOCK            ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNB_CLOCK            ; none          ; Untyped                                                                                         ;
+; EXTRA_OUTPUT_CLEAR           ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNA_CLEAR            ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNB_CLEAR            ; none          ; Untyped                                                                                         ;
+; MULT_PIPELINE                ; 0             ; Untyped                                                                                         ;
+; MULT_CLOCK                   ; NONE          ; Untyped                                                                                         ;
+; MULT_CLEAR                   ; NONE          ; Untyped                                                                                         ;
+; MULT_REPRESENTATION_A        ; UNSIGNED      ; Untyped                                                                                         ;
+; MULT_REPRESENTATION_B        ; UNSIGNED      ; Untyped                                                                                         ;
+; MULT_INPUT_A_IS_CONSTANT     ; NO            ; Untyped                                                                                         ;
+; MULT_INPUT_B_IS_CONSTANT     ; NO            ; Untyped                                                                                         ;
+; MULT_INPUT_A_FIXED_VALUE     ; Bx            ; Untyped                                                                                         ;
+; MULT_INPUT_B_FIXED_VALUE     ; Bx            ; Untyped                                                                                         ;
+; MULT_MAXIMIZE_SPEED          ; 5             ; Untyped                                                                                         ;
+; CBXI_PARAMETER               ; mac_mult_33h1 ; Untyped                                                                                         ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out2 ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+; Parameter Name                ; Value        ; Type                                                                                          ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+; OPERATION_MODE                ; OUTPUT_ONLY  ; Untyped                                                                                       ;
+; DATAA_WIDTH                   ; 36           ; Untyped                                                                                       ;
+; DATAB_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; DATAC_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; DATAD_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; ADDNSUB0_CLOCK                ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_CLOCK                ; NONE         ; Untyped                                                                                       ;
+; ROUND0_CLOCK                  ; none         ; Untyped                                                                                       ;
+; ROUND1_CLOCK                  ; none         ; Untyped                                                                                       ;
+; SATURATE_CLOCK                ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_CLOCK          ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_CLOCK          ; none         ; Untyped                                                                                       ;
+; ZEROACC_CLOCK                 ; NONE         ; Untyped                                                                                       ;
+; SIGNA_CLOCK                   ; NONE         ; Untyped                                                                                       ;
+; SIGNB_CLOCK                   ; NONE         ; Untyped                                                                                       ;
+; OUTPUT_CLOCK                  ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_CLEAR                ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_CLEAR                ; NONE         ; Untyped                                                                                       ;
+; ROUND0_CLEAR                  ; none         ; Untyped                                                                                       ;
+; ROUND1_CLEAR                  ; none         ; Untyped                                                                                       ;
+; SATURATE_CLEAR                ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_CLEAR          ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_CLEAR          ; none         ; Untyped                                                                                       ;
+; ZEROACC_CLEAR                 ; NONE         ; Untyped                                                                                       ;
+; SIGNA_CLEAR                   ; NONE         ; Untyped                                                                                       ;
+; SIGNB_CLEAR                   ; NONE         ; Untyped                                                                                       ;
+; OUTPUT_CLEAR                  ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                       ;
+; ROUND0_PIPELINE_CLOCK         ; none         ; Untyped                                                                                       ;
+; ROUND1_PIPELINE_CLOCK         ; none         ; Untyped                                                                                       ;
+; SATURATE_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                       ;
+; ZEROACC_PIPELINE_CLOCK        ; NONE         ; Untyped                                                                                       ;
+; SIGNA_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                       ;
+; SIGNB_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                       ;
+; ROUND0_PIPELINE_CLEAR         ; none         ; Untyped                                                                                       ;
+; ROUND1_PIPELINE_CLEAR         ; none         ; Untyped                                                                                       ;
+; SATURATE_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                       ;
+; ZEROACC_PIPELINE_CLEAR        ; NONE         ; Untyped                                                                                       ;
+; SIGNA_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                       ;
+; SIGNB_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                       ;
+; MODE0_CLOCK                   ; none         ; Untyped                                                                                       ;
+; MODE1_CLOCK                   ; none         ; Untyped                                                                                       ;
+; ZEROACC1_CLOCK                ; none         ; Untyped                                                                                       ;
+; SATURATE1_CLOCK               ; none         ; Untyped                                                                                       ;
+; OUTPUT1_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT2_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT3_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT4_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT5_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT6_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT7_CLOCK                 ; none         ; Untyped                                                                                       ;
+; MODE0_CLEAR                   ; none         ; Untyped                                                                                       ;
+; MODE1_CLEAR                   ; none         ; Untyped                                                                                       ;
+; ZEROACC1_CLEAR                ; none         ; Untyped                                                                                       ;
+; SATURATE1_CLEAR               ; none         ; Untyped                                                                                       ;
+; OUTPUT1_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT2_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT3_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT4_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT5_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT6_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT7_CLEAR                 ; none         ; Untyped                                                                                       ;
+; MODE0_PIPELINE_CLOCK          ; none         ; Untyped                                                                                       ;
+; MODE1_PIPELINE_CLOCK          ; none         ; Untyped                                                                                       ;
+; ZEROACC1_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; SATURATE1_PIPELINE_CLOCK      ; none         ; Untyped                                                                                       ;
+; MODE0_PIPELINE_CLEAR          ; none         ; Untyped                                                                                       ;
+; MODE1_PIPELINE_CLEAR          ; none         ; Untyped                                                                                       ;
+; ZEROACC1_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; SATURATE1_PIPELINE_CLEAR      ; none         ; Untyped                                                                                       ;
+; FIRST_ADDER0_CLOCK            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER1_CLOCK            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER0_CLEAR            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER1_CLEAR            ; NONE         ; Untyped                                                                                       ;
+; DATAA_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                       ;
+; DATAC_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                       ;
+; USING_ROUNDING                ; NO           ; Untyped                                                                                       ;
+; USING_SATURATION              ; NO           ; Untyped                                                                                       ;
+; USING_MULT_SATURATION         ; NO           ; Untyped                                                                                       ;
+; USING_LOADABLE_ACCUM          ; NO           ; Untyped                                                                                       ;
+; LOADABLE_ACCUM_SUPPORTED      ; NO           ; Untyped                                                                                       ;
+; USING_CHAINOUT                ; NO           ; Untyped                                                                                       ;
+; CHAININ_WIDTH                 ; 0            ; Untyped                                                                                       ;
+; CHAINOUT_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; CHAINOUT_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; CBXI_PARAMETER                ; mac_out_sv82 ; Untyped                                                                                       ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult5 ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name               ; Value         ; Type                                                                                            ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTHS                   ; 1             ; Untyped                                                                                         ;
+; DATAA_WIDTH                  ; 14            ; Untyped                                                                                         ;
+; DATAB_WIDTH                  ; 18            ; Untyped                                                                                         ;
+; DATAA_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; DATAB_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; SIGNA_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; SIGNB_CLOCK                  ; NONE          ; Untyped                                                                                         ;
+; OUTPUT_CLOCK                 ; NONE          ; Untyped                                                                                         ;
+; DATAA_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; DATAB_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; SIGNA_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; SIGNB_CLEAR                  ; NONE          ; Untyped                                                                                         ;
+; OUTPUT_CLEAR                 ; NONE          ; Untyped                                                                                         ;
+; ROUND_CLOCK                  ; none          ; Untyped                                                                                         ;
+; ROUND_CLEAR                  ; none          ; Untyped                                                                                         ;
+; SATURATE_CLOCK               ; none          ; Untyped                                                                                         ;
+; SATURATE_CLEAR               ; none          ; Untyped                                                                                         ;
+; BYPASS_MULTIPLIER            ; NO            ; Untyped                                                                                         ;
+; DYNAMIC_SCAN_CHAIN_SUPPORTED ; NO            ; Untyped                                                                                         ;
+; USING_ROUNDING               ; NO            ; Untyped                                                                                         ;
+; USING_SATURATION             ; NO            ; Untyped                                                                                         ;
+; EXTRA_OUTPUT_CLOCK           ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNA_CLOCK            ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNB_CLOCK            ; none          ; Untyped                                                                                         ;
+; EXTRA_OUTPUT_CLEAR           ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNA_CLEAR            ; none          ; Untyped                                                                                         ;
+; EXTRA_SIGNB_CLEAR            ; none          ; Untyped                                                                                         ;
+; MULT_PIPELINE                ; 0             ; Untyped                                                                                         ;
+; MULT_CLOCK                   ; NONE          ; Untyped                                                                                         ;
+; MULT_CLEAR                   ; NONE          ; Untyped                                                                                         ;
+; MULT_REPRESENTATION_A        ; SIGNED        ; Untyped                                                                                         ;
+; MULT_REPRESENTATION_B        ; UNSIGNED      ; Untyped                                                                                         ;
+; MULT_INPUT_A_IS_CONSTANT     ; NO            ; Untyped                                                                                         ;
+; MULT_INPUT_B_IS_CONSTANT     ; NO            ; Untyped                                                                                         ;
+; MULT_INPUT_A_FIXED_VALUE     ; Bx            ; Untyped                                                                                         ;
+; MULT_INPUT_B_FIXED_VALUE     ; Bx            ; Untyped                                                                                         ;
+; MULT_MAXIMIZE_SPEED          ; 5             ; Untyped                                                                                         ;
+; CBXI_PARAMETER               ; mac_mult_68h1 ; Untyped                                                                                         ;
++------------------------------+---------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out6 ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+; Parameter Name                ; Value        ; Type                                                                                          ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+; OPERATION_MODE                ; OUTPUT_ONLY  ; Untyped                                                                                       ;
+; DATAA_WIDTH                   ; 32           ; Untyped                                                                                       ;
+; DATAB_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; DATAC_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; DATAD_WIDTH                   ; 0            ; Untyped                                                                                       ;
+; ADDNSUB0_CLOCK                ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_CLOCK                ; NONE         ; Untyped                                                                                       ;
+; ROUND0_CLOCK                  ; none         ; Untyped                                                                                       ;
+; ROUND1_CLOCK                  ; none         ; Untyped                                                                                       ;
+; SATURATE_CLOCK                ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_CLOCK          ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_CLOCK          ; none         ; Untyped                                                                                       ;
+; ZEROACC_CLOCK                 ; NONE         ; Untyped                                                                                       ;
+; SIGNA_CLOCK                   ; NONE         ; Untyped                                                                                       ;
+; SIGNB_CLOCK                   ; NONE         ; Untyped                                                                                       ;
+; OUTPUT_CLOCK                  ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_CLEAR                ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_CLEAR                ; NONE         ; Untyped                                                                                       ;
+; ROUND0_CLEAR                  ; none         ; Untyped                                                                                       ;
+; ROUND1_CLEAR                  ; none         ; Untyped                                                                                       ;
+; SATURATE_CLEAR                ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_CLEAR          ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_CLEAR          ; none         ; Untyped                                                                                       ;
+; ZEROACC_CLEAR                 ; NONE         ; Untyped                                                                                       ;
+; SIGNA_CLEAR                   ; NONE         ; Untyped                                                                                       ;
+; SIGNB_CLEAR                   ; NONE         ; Untyped                                                                                       ;
+; OUTPUT_CLEAR                  ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                       ;
+; ROUND0_PIPELINE_CLOCK         ; none         ; Untyped                                                                                       ;
+; ROUND1_PIPELINE_CLOCK         ; none         ; Untyped                                                                                       ;
+; SATURATE_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                       ;
+; ZEROACC_PIPELINE_CLOCK        ; NONE         ; Untyped                                                                                       ;
+; SIGNA_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                       ;
+; SIGNB_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB0_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                       ;
+; ADDNSUB1_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                       ;
+; ROUND0_PIPELINE_CLEAR         ; none         ; Untyped                                                                                       ;
+; ROUND1_PIPELINE_CLEAR         ; none         ; Untyped                                                                                       ;
+; SATURATE_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; MULTABSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                       ;
+; MULTCDSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                       ;
+; ZEROACC_PIPELINE_CLEAR        ; NONE         ; Untyped                                                                                       ;
+; SIGNA_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                       ;
+; SIGNB_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                       ;
+; MODE0_CLOCK                   ; none         ; Untyped                                                                                       ;
+; MODE1_CLOCK                   ; none         ; Untyped                                                                                       ;
+; ZEROACC1_CLOCK                ; none         ; Untyped                                                                                       ;
+; SATURATE1_CLOCK               ; none         ; Untyped                                                                                       ;
+; OUTPUT1_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT2_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT3_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT4_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT5_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT6_CLOCK                 ; none         ; Untyped                                                                                       ;
+; OUTPUT7_CLOCK                 ; none         ; Untyped                                                                                       ;
+; MODE0_CLEAR                   ; none         ; Untyped                                                                                       ;
+; MODE1_CLEAR                   ; none         ; Untyped                                                                                       ;
+; ZEROACC1_CLEAR                ; none         ; Untyped                                                                                       ;
+; SATURATE1_CLEAR               ; none         ; Untyped                                                                                       ;
+; OUTPUT1_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT2_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT3_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT4_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT5_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT6_CLEAR                 ; none         ; Untyped                                                                                       ;
+; OUTPUT7_CLEAR                 ; none         ; Untyped                                                                                       ;
+; MODE0_PIPELINE_CLOCK          ; none         ; Untyped                                                                                       ;
+; MODE1_PIPELINE_CLOCK          ; none         ; Untyped                                                                                       ;
+; ZEROACC1_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; SATURATE1_PIPELINE_CLOCK      ; none         ; Untyped                                                                                       ;
+; MODE0_PIPELINE_CLEAR          ; none         ; Untyped                                                                                       ;
+; MODE1_PIPELINE_CLEAR          ; none         ; Untyped                                                                                       ;
+; ZEROACC1_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; SATURATE1_PIPELINE_CLEAR      ; none         ; Untyped                                                                                       ;
+; FIRST_ADDER0_CLOCK            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER1_CLOCK            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER0_CLEAR            ; NONE         ; Untyped                                                                                       ;
+; FIRST_ADDER1_CLEAR            ; NONE         ; Untyped                                                                                       ;
+; DATAA_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                       ;
+; DATAC_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                       ;
+; USING_ROUNDING                ; NO           ; Untyped                                                                                       ;
+; USING_SATURATION              ; NO           ; Untyped                                                                                       ;
+; USING_MULT_SATURATION         ; NO           ; Untyped                                                                                       ;
+; USING_LOADABLE_ACCUM          ; NO           ; Untyped                                                                                       ;
+; LOADABLE_ACCUM_SUPPORTED      ; NO           ; Untyped                                                                                       ;
+; USING_CHAINOUT                ; NO           ; Untyped                                                                                       ;
+; CHAININ_WIDTH                 ; 0            ; Untyped                                                                                       ;
+; CHAINOUT_PIPELINE_CLOCK       ; none         ; Untyped                                                                                       ;
+; CHAINOUT_PIPELINE_CLEAR       ; none         ; Untyped                                                                                       ;
+; CBXI_PARAMETER                ; mac_out_kv82 ; Untyped                                                                                       ;
++-------------------------------+--------------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                         ;
++---------------------------------------+------------------------------------------------+
+; Name                                  ; Value                                          ;
++---------------------------------------+------------------------------------------------+
+; Number of entity instances            ; 1                                              ;
+; Entity Instance                       ; myMultiplier:inst3|lpm_mult:lpm_mult_component ;
+;     -- LPM_WIDTHA                     ; 32                                             ;
+;     -- LPM_WIDTHB                     ; 32                                             ;
+;     -- LPM_WIDTHP                     ; 32                                             ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                             ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                             ;
+;     -- USE_EAB                        ; OFF                                            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                             ;
++---------------------------------------+------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:08     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Feb 08 23:07:12 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (12019): Can't analyze file -- file ../New folder (2)/test.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file test.bdf
+    Info (12023): Found entity 1: test
+Info (12021): Found 2 design units, including 1 entities, in source file mymultiplier.vhd
+    Info (12022): Found design unit 1: mymultiplier-SYN
+    Info (12023): Found entity 1: myMultiplier
+Info (12021): Found 2 design units, including 1 entities, in source file mydivider.vhd
+    Info (12022): Found design unit 1: mydivider-SYN
+    Info (12023): Found entity 1: myDivider
+Info (12021): Found 2 design units, including 1 entities, in source file myshift.vhd
+    Info (12022): Found design unit 1: myshift-SYN
+    Info (12023): Found entity 1: myShift
+Info (12021): Found 2 design units, including 1 entities, in source file myrotate.vhd
+    Info (12022): Found design unit 1: myrotate-SYN
+    Info (12023): Found entity 1: myRotate
+Info (12021): Found 2 design units, including 1 entities, in source file mymux.vhd
+    Info (12022): Found design unit 1: mymux-SYN
+    Info (12023): Found entity 1: myMux
+Info (12021): Found 2 design units, including 1 entities, in source file my_mux2.vhd
+    Info (12022): Found design unit 1: my_mux2-SYN
+    Info (12023): Found entity 1: my_mux2
+Info (12127): Elaborating entity "test" for the top level hierarchy
+Warning (275002): No superset bus at connection
+Info (12128): Elaborating entity "myMux" for hierarchy "myMux:inst12"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "myMux:inst12|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "myMux:inst12|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "myMux:inst12|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_SIZE" = "32"
+    Info (12134): Parameter "LPM_WIDTHS" = "5"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_nee.tdf
+    Info (12023): Found entity 1: mux_nee
+Info (12128): Elaborating entity "mux_nee" for hierarchy "myMux:inst12|LPM_MUX:LPM_MUX_component|mux_nee:auto_generated"
+Warning (12125): Using design file zerogenerator.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: zeroGenerator
+Info (12128): Elaborating entity "zeroGenerator" for hierarchy "zeroGenerator:inst17"
+Warning (12125): Using design file zerogenerator_lpm_constant_r09.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: zeroGenerator_lpm_constant_r09
+Info (12128): Elaborating entity "zeroGenerator_lpm_constant_r09" for hierarchy "zeroGenerator:inst17|zeroGenerator_lpm_constant_r09:zeroGenerator_lpm_constant_r09_component"
+Info (12128): Elaborating entity "LPM_INV" for hierarchy "LPM_INV:inst9"
+Info (12130): Elaborated megafunction instantiation "LPM_INV:inst9"
+Info (12133): Instantiated megafunction "LPM_INV:inst9" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+Info (12128): Elaborating entity "LPM_XOR" for hierarchy "LPM_XOR:inst8"
+Info (12130): Elaborated megafunction instantiation "LPM_XOR:inst8"
+Info (12133): Instantiated megafunction "LPM_XOR:inst8" with the following parameter:
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+Info (12128): Elaborating entity "myShift" for hierarchy "myShift:inst10"
+Info (12128): Elaborating entity "lpm_clshift" for hierarchy "myShift:inst10|lpm_clshift:LPM_CLSHIFT_component"
+Info (12130): Elaborated megafunction instantiation "myShift:inst10|lpm_clshift:LPM_CLSHIFT_component"
+Info (12133): Instantiated megafunction "myShift:inst10|lpm_clshift:LPM_CLSHIFT_component" with the following parameter:
+    Info (12134): Parameter "lpm_shifttype" = "LOGICAL"
+    Info (12134): Parameter "lpm_type" = "LPM_CLSHIFT"
+    Info (12134): Parameter "lpm_width" = "32"
+    Info (12134): Parameter "lpm_widthdist" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_vjc.tdf
+    Info (12023): Found entity 1: lpm_clshift_vjc
+Info (12128): Elaborating entity "lpm_clshift_vjc" for hierarchy "myShift:inst10|lpm_clshift:LPM_CLSHIFT_component|lpm_clshift_vjc:auto_generated"
+Info (12128): Elaborating entity "myRotate" for hierarchy "myRotate:inst11"
+Info (12128): Elaborating entity "lpm_clshift" for hierarchy "myRotate:inst11|lpm_clshift:LPM_CLSHIFT_component"
+Info (12130): Elaborated megafunction instantiation "myRotate:inst11|lpm_clshift:LPM_CLSHIFT_component"
+Info (12133): Instantiated megafunction "myRotate:inst11|lpm_clshift:LPM_CLSHIFT_component" with the following parameter:
+    Info (12134): Parameter "lpm_shifttype" = "ROTATE"
+    Info (12134): Parameter "lpm_type" = "LPM_CLSHIFT"
+    Info (12134): Parameter "lpm_width" = "32"
+    Info (12134): Parameter "lpm_widthdist" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_jhc.tdf
+    Info (12023): Found entity 1: lpm_clshift_jhc
+Info (12128): Elaborating entity "lpm_clshift_jhc" for hierarchy "myRotate:inst11|lpm_clshift:LPM_CLSHIFT_component|lpm_clshift_jhc:auto_generated"
+Warning (12125): Using design file my_comparetor.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: my_comparetor
+Info (12128): Elaborating entity "my_comparetor" for hierarchy "my_comparetor:inst"
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "my_comparetor:inst|lpm_compare:LPM_COMPARE_component"
+Info (12130): Elaborated megafunction instantiation "my_comparetor:inst|lpm_compare:LPM_COMPARE_component"
+Info (12133): Instantiated megafunction "my_comparetor:inst|lpm_compare:LPM_COMPARE_component" with the following parameter:
+    Info (12134): Parameter "LPM_TYPE" = "LPM_COMPARE"
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_s8h.tdf
+    Info (12023): Found entity 1: cmpr_s8h
+Info (12128): Elaborating entity "cmpr_s8h" for hierarchy "my_comparetor:inst|lpm_compare:LPM_COMPARE_component|cmpr_s8h:auto_generated"
+Warning (12125): Using design file myaddsub.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: myAddSub
+Info (12128): Elaborating entity "myAddSub" for hierarchy "myAddSub:inst2"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "myAddSub:inst2|lpm_add_sub:LPM_ADD_SUB_component"
+Info (12130): Elaborated megafunction instantiation "myAddSub:inst2|lpm_add_sub:LPM_ADD_SUB_component"
+Info (12133): Instantiated megafunction "myAddSub:inst2|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter:
+    Info (12134): Parameter "LPM_TYPE" = "LPM_ADD_SUB"
+    Info (12134): Parameter "LPM_HINT" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DIRECTION" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1lg.tdf
+    Info (12023): Found entity 1: add_sub_1lg
+Info (12128): Elaborating entity "add_sub_1lg" for hierarchy "myAddSub:inst2|lpm_add_sub:LPM_ADD_SUB_component|add_sub_1lg:auto_generated"
+Info (12128): Elaborating entity "myMultiplier" for hierarchy "myMultiplier:inst3"
+Info (12128): Elaborating entity "lpm_mult" for hierarchy "myMultiplier:inst3|lpm_mult:lpm_mult_component"
+Info (12130): Elaborated megafunction instantiation "myMultiplier:inst3|lpm_mult:lpm_mult_component"
+Info (12133): Instantiated megafunction "myMultiplier:inst3|lpm_mult:lpm_mult_component" with the following parameter:
+    Info (12134): Parameter "lpm_hint" = "MAXIMIZE_SPEED=5"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_MULT"
+    Info (12134): Parameter "lpm_widtha" = "32"
+    Info (12134): Parameter "lpm_widthb" = "32"
+    Info (12134): Parameter "lpm_widthp" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_bcn.tdf
+    Info (12023): Found entity 1: mult_bcn
+Info (12128): Elaborating entity "mult_bcn" for hierarchy "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated"
+Info (12128): Elaborating entity "myDivider" for hierarchy "myDivider:inst4"
+Info (12128): Elaborating entity "lpm_divide" for hierarchy "myDivider:inst4|lpm_divide:LPM_DIVIDE_component"
+Info (12130): Elaborated megafunction instantiation "myDivider:inst4|lpm_divide:LPM_DIVIDE_component"
+Info (12133): Instantiated megafunction "myDivider:inst4|lpm_divide:LPM_DIVIDE_component" with the following parameter:
+    Info (12134): Parameter "lpm_drepresentation" = "SIGNED"
+    Info (12134): Parameter "lpm_hint" = "LPM_REMAINDERPOSITIVE=TRUE"
+    Info (12134): Parameter "lpm_nrepresentation" = "SIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_DIVIDE"
+    Info (12134): Parameter "lpm_widthd" = "32"
+    Info (12134): Parameter "lpm_widthn" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_kop.tdf
+    Info (12023): Found entity 1: lpm_divide_kop
+Info (12128): Elaborating entity "lpm_divide_kop" for hierarchy "myDivider:inst4|lpm_divide:LPM_DIVIDE_component|lpm_divide_kop:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_39h.tdf
+    Info (12023): Found entity 1: sign_div_unsign_39h
+Info (12128): Elaborating entity "sign_div_unsign_39h" for hierarchy "myDivider:inst4|lpm_divide:LPM_DIVIDE_component|lpm_divide_kop:auto_generated|sign_div_unsign_39h:divider"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0ef.tdf
+    Info (12023): Found entity 1: alt_u_div_0ef
+Info (12128): Elaborating entity "alt_u_div_0ef" for hierarchy "myDivider:inst4|lpm_divide:LPM_DIVIDE_component|lpm_divide_kop:auto_generated|sign_div_unsign_39h:divider|alt_u_div_0ef:divider"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1tc.tdf
+    Info (12023): Found entity 1: add_sub_1tc
+Info (12128): Elaborating entity "add_sub_1tc" for hierarchy "myDivider:inst4|lpm_divide:LPM_DIVIDE_component|lpm_divide_kop:auto_generated|sign_div_unsign_39h:divider|alt_u_div_0ef:divider|add_sub_1tc:add_sub_0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_2tc.tdf
+    Info (12023): Found entity 1: add_sub_2tc
+Info (12128): Elaborating entity "add_sub_2tc" for hierarchy "myDivider:inst4|lpm_divide:LPM_DIVIDE_component|lpm_divide_kop:auto_generated|sign_div_unsign_39h:divider|alt_u_div_0ef:divider|add_sub_2tc:add_sub_1"
+Info (12128): Elaborating entity "LPM_AND" for hierarchy "LPM_AND:inst5"
+Info (12130): Elaborated megafunction instantiation "LPM_AND:inst5"
+Info (12133): Instantiated megafunction "LPM_AND:inst5" with the following parameter:
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+Info (12128): Elaborating entity "my_mux2" for hierarchy "my_mux2:inst13"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "my_mux2:inst13|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "my_mux2:inst13|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "my_mux2:inst13|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_0de.tdf
+    Info (12023): Found entity 1: mux_0de
+Info (12128): Elaborating entity "mux_0de" for hierarchy "my_mux2:inst13|LPM_MUX:LPM_MUX_component|mux_0de:auto_generated"
+Info (12128): Elaborating entity "LPM_INV" for hierarchy "LPM_INV:inst6"
+Info (12130): Elaborated megafunction instantiation "LPM_INV:inst6"
+Info (12133): Instantiated megafunction "LPM_INV:inst6" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+Info (13014): Ignored 234 buffer(s)
+    Info (13019): Ignored 234 SOFT buffer(s)
+Info (270001): Converted 4 DSP block slices
+    Info (270002): Used 4 DSP blocks before DSP block balancing
+        Info (270003): Used 4 DSP block slices in "Simple Multiplier (18-bit)" mode implemented in approximately 4 DSP blocks
+    Info (270013): Converted the following 4 DSP block slices to logic elements
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_out8"
+            Info (270004): DSP block output node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_out8"
+            Info (270005): DSP block multiplier node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_mult7"
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_out4"
+            Info (270004): DSP block output node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_out4"
+            Info (270005): DSP block multiplier node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_mult3"
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_out2"
+            Info (270004): DSP block output node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_out2"
+            Info (270005): DSP block multiplier node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_mult1"
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_out6"
+            Info (270004): DSP block output node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_out6"
+            Info (270005): DSP block multiplier node "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|mac_mult5"
+    Info (270002): Used 0 DSP blocks after DSP block balancing
+Info (12130): Elaborated megafunction instantiation "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult7"
+Info (12133): Instantiated megafunction "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult7" with the following parameter:
+    Info (12134): Parameter "MULT_REPRESENTATION_A" = "SIGNED"
+    Info (12134): Parameter "MULT_REPRESENTATION_B" = "SIGNED"
+    Info (12134): Parameter "MULT_PIPELINE" = "0"
+    Info (12134): Parameter "MULT_CLOCK" = "NONE"
+    Info (12134): Parameter "MULT_CLEAR" = "NONE"
+    Info (12134): Parameter "MULT_INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MULT_INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "dataa_width" = "14"
+    Info (12134): Parameter "datab_width" = "14"
+    Info (12134): Parameter "output_width" = "28"
+    Info (12134): Parameter "dataa_clock" = "NONE"
+    Info (12134): Parameter "datab_clock" = "NONE"
+    Info (12134): Parameter "signa_clock" = "NONE"
+    Info (12134): Parameter "signb_clock" = "NONE"
+    Info (12134): Parameter "output_clock" = "NONE"
+    Info (12134): Parameter "dataa_clear" = "NONE"
+    Info (12134): Parameter "datab_clear" = "NONE"
+    Info (12134): Parameter "signa_clear" = "NONE"
+    Info (12134): Parameter "signb_clear" = "NONE"
+    Info (12134): Parameter "output_clear" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mac_mult_gdh1.tdf
+    Info (12023): Found entity 1: mac_mult_gdh1
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_ako.tdf
+    Info (12023): Found entity 1: mult_ako
+Info (12130): Elaborated megafunction instantiation "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out8"
+Info (12133): Instantiated megafunction "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out8" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "OUTPUT_ONLY"
+    Info (12134): Parameter "dataa_width" = "28"
+    Info (12134): Parameter "datab_width" = "0"
+    Info (12134): Parameter "datac_width" = "0"
+    Info (12134): Parameter "datad_width" = "0"
+    Info (12134): Parameter "output_width" = "28"
+    Info (12134): Parameter "signa_clock" = "NONE"
+    Info (12134): Parameter "signb_clock" = "NONE"
+    Info (12134): Parameter "addnsub0_clock" = "NONE"
+    Info (12134): Parameter "addnsub1_clock" = "NONE"
+    Info (12134): Parameter "zeroacc_clock" = "NONE"
+    Info (12134): Parameter "first_adder0_clock" = "NONE"
+    Info (12134): Parameter "first_adder1_clock" = "NONE"
+    Info (12134): Parameter "output_clock" = "NONE"
+    Info (12134): Parameter "signa_clear" = "NONE"
+    Info (12134): Parameter "signb_clear" = "NONE"
+    Info (12134): Parameter "addnsub0_clear" = "NONE"
+    Info (12134): Parameter "addnsub1_clear" = "NONE"
+    Info (12134): Parameter "zeroacc_clear" = "NONE"
+    Info (12134): Parameter "first_adder0_clear" = "NONE"
+    Info (12134): Parameter "first_adder1_clear" = "NONE"
+    Info (12134): Parameter "output_clear" = "NONE"
+    Info (12134): Parameter "signa_pipeline_clock" = "NONE"
+    Info (12134): Parameter "signb_pipeline_clock" = "NONE"
+    Info (12134): Parameter "addnsub0_pipeline_clock" = "NONE"
+    Info (12134): Parameter "addnsub1_pipeline_clock" = "NONE"
+    Info (12134): Parameter "zeroacc_pipeline_clock" = "NONE"
+    Info (12134): Parameter "signa_pipeline_clear" = "NONE"
+    Info (12134): Parameter "signb_pipeline_clear" = "NONE"
+    Info (12134): Parameter "addnsub0_pipeline_clear" = "NONE"
+    Info (12134): Parameter "addnsub1_pipeline_clear" = "NONE"
+    Info (12134): Parameter "zeroacc_pipeline_clear" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mac_out_uv82.tdf
+    Info (12023): Found entity 1: mac_out_uv82
+Info (12130): Elaborated megafunction instantiation "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult3"
+Info (12133): Instantiated megafunction "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult3" with the following parameter:
+    Info (12134): Parameter "MULT_REPRESENTATION_A" = "UNSIGNED"
+    Info (12134): Parameter "MULT_REPRESENTATION_B" = "SIGNED"
+    Info (12134): Parameter "MULT_PIPELINE" = "0"
+    Info (12134): Parameter "MULT_CLOCK" = "NONE"
+    Info (12134): Parameter "MULT_CLEAR" = "NONE"
+    Info (12134): Parameter "MULT_INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MULT_INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "dataa_width" = "18"
+    Info (12134): Parameter "datab_width" = "14"
+    Info (12134): Parameter "output_width" = "32"
+    Info (12134): Parameter "dataa_clock" = "NONE"
+    Info (12134): Parameter "datab_clock" = "NONE"
+    Info (12134): Parameter "signa_clock" = "NONE"
+    Info (12134): Parameter "signb_clock" = "NONE"
+    Info (12134): Parameter "output_clock" = "NONE"
+    Info (12134): Parameter "dataa_clear" = "NONE"
+    Info (12134): Parameter "datab_clear" = "NONE"
+    Info (12134): Parameter "signa_clear" = "NONE"
+    Info (12134): Parameter "signb_clear" = "NONE"
+    Info (12134): Parameter "output_clear" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mac_mult_58h1.tdf
+    Info (12023): Found entity 1: mac_mult_58h1
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_bko.tdf
+    Info (12023): Found entity 1: mult_bko
+Info (12130): Elaborated megafunction instantiation "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out4"
+Info (12133): Instantiated megafunction "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out4" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "OUTPUT_ONLY"
+    Info (12134): Parameter "dataa_width" = "32"
+    Info (12134): Parameter "datab_width" = "0"
+    Info (12134): Parameter "datac_width" = "0"
+    Info (12134): Parameter "datad_width" = "0"
+    Info (12134): Parameter "output_width" = "32"
+    Info (12134): Parameter "signa_clock" = "NONE"
+    Info (12134): Parameter "signb_clock" = "NONE"
+    Info (12134): Parameter "addnsub0_clock" = "NONE"
+    Info (12134): Parameter "addnsub1_clock" = "NONE"
+    Info (12134): Parameter "zeroacc_clock" = "NONE"
+    Info (12134): Parameter "first_adder0_clock" = "NONE"
+    Info (12134): Parameter "first_adder1_clock" = "NONE"
+    Info (12134): Parameter "output_clock" = "NONE"
+    Info (12134): Parameter "signa_clear" = "NONE"
+    Info (12134): Parameter "signb_clear" = "NONE"
+    Info (12134): Parameter "addnsub0_clear" = "NONE"
+    Info (12134): Parameter "addnsub1_clear" = "NONE"
+    Info (12134): Parameter "zeroacc_clear" = "NONE"
+    Info (12134): Parameter "first_adder0_clear" = "NONE"
+    Info (12134): Parameter "first_adder1_clear" = "NONE"
+    Info (12134): Parameter "output_clear" = "NONE"
+    Info (12134): Parameter "signa_pipeline_clock" = "NONE"
+    Info (12134): Parameter "signb_pipeline_clock" = "NONE"
+    Info (12134): Parameter "addnsub0_pipeline_clock" = "NONE"
+    Info (12134): Parameter "addnsub1_pipeline_clock" = "NONE"
+    Info (12134): Parameter "zeroacc_pipeline_clock" = "NONE"
+    Info (12134): Parameter "signa_pipeline_clear" = "NONE"
+    Info (12134): Parameter "signb_pipeline_clear" = "NONE"
+    Info (12134): Parameter "addnsub0_pipeline_clear" = "NONE"
+    Info (12134): Parameter "addnsub1_pipeline_clear" = "NONE"
+    Info (12134): Parameter "zeroacc_pipeline_clear" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mac_out_kv82.tdf
+    Info (12023): Found entity 1: mac_out_kv82
+Info (12130): Elaborated megafunction instantiation "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult1"
+Info (12133): Instantiated megafunction "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult1" with the following parameter:
+    Info (12134): Parameter "MULT_REPRESENTATION_A" = "UNSIGNED"
+    Info (12134): Parameter "MULT_REPRESENTATION_B" = "UNSIGNED"
+    Info (12134): Parameter "MULT_PIPELINE" = "0"
+    Info (12134): Parameter "MULT_CLOCK" = "NONE"
+    Info (12134): Parameter "MULT_CLEAR" = "NONE"
+    Info (12134): Parameter "MULT_INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MULT_INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "dataa_width" = "18"
+    Info (12134): Parameter "datab_width" = "18"
+    Info (12134): Parameter "output_width" = "36"
+    Info (12134): Parameter "dataa_clock" = "NONE"
+    Info (12134): Parameter "datab_clock" = "NONE"
+    Info (12134): Parameter "signa_clock" = "NONE"
+    Info (12134): Parameter "signb_clock" = "NONE"
+    Info (12134): Parameter "output_clock" = "NONE"
+    Info (12134): Parameter "dataa_clear" = "NONE"
+    Info (12134): Parameter "datab_clear" = "NONE"
+    Info (12134): Parameter "signa_clear" = "NONE"
+    Info (12134): Parameter "signb_clear" = "NONE"
+    Info (12134): Parameter "output_clear" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mac_mult_33h1.tdf
+    Info (12023): Found entity 1: mac_mult_33h1
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_rul.tdf
+    Info (12023): Found entity 1: mult_rul
+Info (12130): Elaborated megafunction instantiation "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out2"
+Info (12133): Instantiated megafunction "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out2" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "OUTPUT_ONLY"
+    Info (12134): Parameter "dataa_width" = "36"
+    Info (12134): Parameter "datab_width" = "0"
+    Info (12134): Parameter "datac_width" = "0"
+    Info (12134): Parameter "datad_width" = "0"
+    Info (12134): Parameter "output_width" = "36"
+    Info (12134): Parameter "signa_clock" = "NONE"
+    Info (12134): Parameter "signb_clock" = "NONE"
+    Info (12134): Parameter "addnsub0_clock" = "NONE"
+    Info (12134): Parameter "addnsub1_clock" = "NONE"
+    Info (12134): Parameter "zeroacc_clock" = "NONE"
+    Info (12134): Parameter "first_adder0_clock" = "NONE"
+    Info (12134): Parameter "first_adder1_clock" = "NONE"
+    Info (12134): Parameter "output_clock" = "NONE"
+    Info (12134): Parameter "signa_clear" = "NONE"
+    Info (12134): Parameter "signb_clear" = "NONE"
+    Info (12134): Parameter "addnsub0_clear" = "NONE"
+    Info (12134): Parameter "addnsub1_clear" = "NONE"
+    Info (12134): Parameter "zeroacc_clear" = "NONE"
+    Info (12134): Parameter "first_adder0_clear" = "NONE"
+    Info (12134): Parameter "first_adder1_clear" = "NONE"
+    Info (12134): Parameter "output_clear" = "NONE"
+    Info (12134): Parameter "signa_pipeline_clock" = "NONE"
+    Info (12134): Parameter "signb_pipeline_clock" = "NONE"
+    Info (12134): Parameter "addnsub0_pipeline_clock" = "NONE"
+    Info (12134): Parameter "addnsub1_pipeline_clock" = "NONE"
+    Info (12134): Parameter "zeroacc_pipeline_clock" = "NONE"
+    Info (12134): Parameter "signa_pipeline_clear" = "NONE"
+    Info (12134): Parameter "signb_pipeline_clear" = "NONE"
+    Info (12134): Parameter "addnsub0_pipeline_clear" = "NONE"
+    Info (12134): Parameter "addnsub1_pipeline_clear" = "NONE"
+    Info (12134): Parameter "zeroacc_pipeline_clear" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mac_out_sv82.tdf
+    Info (12023): Found entity 1: mac_out_sv82
+Info (12130): Elaborated megafunction instantiation "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult5"
+Info (12133): Instantiated megafunction "myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult5" with the following parameter:
+    Info (12134): Parameter "MULT_REPRESENTATION_A" = "SIGNED"
+    Info (12134): Parameter "MULT_REPRESENTATION_B" = "UNSIGNED"
+    Info (12134): Parameter "MULT_PIPELINE" = "0"
+    Info (12134): Parameter "MULT_CLOCK" = "NONE"
+    Info (12134): Parameter "MULT_CLEAR" = "NONE"
+    Info (12134): Parameter "MULT_INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MULT_INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "dataa_width" = "14"
+    Info (12134): Parameter "datab_width" = "18"
+    Info (12134): Parameter "output_width" = "32"
+    Info (12134): Parameter "dataa_clock" = "NONE"
+    Info (12134): Parameter "datab_clock" = "NONE"
+    Info (12134): Parameter "signa_clock" = "NONE"
+    Info (12134): Parameter "signb_clock" = "NONE"
+    Info (12134): Parameter "output_clock" = "NONE"
+    Info (12134): Parameter "dataa_clear" = "NONE"
+    Info (12134): Parameter "datab_clear" = "NONE"
+    Info (12134): Parameter "signa_clear" = "NONE"
+    Info (12134): Parameter "signb_clear" = "NONE"
+    Info (12134): Parameter "output_clear" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mac_mult_68h1.tdf
+    Info (12023): Found entity 1: mac_mult_68h1
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_cko.tdf
+    Info (12023): Found entity 1: mult_cko
+Info (13014): Ignored 1789 buffer(s)
+    Info (13016): Ignored 54 CARRY_SUM buffer(s)
+    Info (13019): Ignored 1735 SOFT buffer(s)
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 3423 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 69 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 3322 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Mon Feb 08 23:07:26 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:14
+
+

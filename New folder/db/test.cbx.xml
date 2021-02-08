@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="test">
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_33h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_sv82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out6" CBX_FILE_NAME="mac_out_kv82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myRotate:inst11|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_jhc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|my_mux2:inst13|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_0de.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult3" CBX_FILE_NAME="mac_mult_58h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult7" CBX_FILE_NAME="mac_mult_gdh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|my_mux2:inst14|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_0de.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myAddSub:inst2|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_1lg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myDivider:inst4|lpm_divide:LPM_DIVIDE_component" CBX_FILE_NAME="lpm_divide_kop.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out4" CBX_FILE_NAME="mac_out_kv82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_out:mac_out8" CBX_FILE_NAME="mac_out_uv82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMux:inst12|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_nee.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myShift:inst10|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_vjc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|my_comparetor:inst|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_s8h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMultiplier:inst3|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_bcn.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|myMultiplier:inst3|lpm_mult:lpm_mult_component|mult_bcn:auto_generated|alt_mac_mult:mac_mult5" CBX_FILE_NAME="mac_mult_68h1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

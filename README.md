@@ -1,4 +1,4 @@
-# CA_peoject
+# CA_project
 Computer Architecture Project
 
 designing a full machine
